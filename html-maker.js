@@ -1,4 +1,5 @@
 import { Command } from "commander";
+import inquirer from "inquirer";
 import fs from "fs";
 
 const program = new Command();
@@ -24,6 +25,31 @@ program.command('html')
     }
 
   })
+  
+// 새 커맨드를 추가, 이름을 html-inquirer로 등록
+program.command('html-inquirer')
+    //옵션을 inquirer로 설정하기위해 다른 args나 옵션값을 받지 않고 action에서 inquirer를 실행
+  .description('inquirer을 사용하여 새로운 html을 생성해 result폴더에 저장한다.')
+  .action(() => {
+    inquirer.prompt([
+      {
+        type:"",
+        name:"",
+        message:""
+      },
+      {
+        type:"",
+        name:"",
+        message:""
+      },
+      {
+        type:"",
+        name:"",
+        message:""
+      },
+    ])
+  
+})
 
 function htmlMaker(title, addRoot, p) {
   let bodyInnerHTML = "";
