@@ -23,7 +23,6 @@ program.command('html')
       console.error(`${error}가 발생하였습니다.`, error);
       throw error;
     }
-
   })
   
 // 새 커맨드를 추가, 이름을 html-inquirer로 등록
@@ -58,9 +57,12 @@ program.command('html-inquirer')
       },
     ]).then(answer => {
       const html = htmlMaker(answer.title, answer.root, answer.p)
-      console.log(`파일명 : ${answer.fileName}.html,
-      내용 : 
-      ${html}`)
+      try {
+        fs.writeFileSync(`./result/${answer.fileName}.html`, html, "utf8");
+      } catch (error) {
+        console.error(`${error}가 발생하였습니다.`, error);
+        throw error;
+      }
     })
   
 })
