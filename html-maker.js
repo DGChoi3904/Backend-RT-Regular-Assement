@@ -33,21 +33,31 @@ program.command('html-inquirer')
   .action(() => {
     inquirer.prompt([
       {
-        type:"",
-        name:"",
-        message:""
+        type:"input",
+        name:"fileName",
+        message:"새로 작성할 HTML 파일명을 입력하세요."
       },
       {
-        type:"",
-        name:"",
-        message:""
+        type:"input",
+        name:"title",
+        message:"새 HTML의 타이틀을 입력하세요."
       },
       {
-        type:"",
-        name:"",
-        message:""
+        type:"confirm",
+        name:"root",
+        message:"div#root을 사용하시겠습니까?"
       },
-    ])
+      {
+        type:"input",
+        name:"p",
+        message:"p에 들어갈 본문 내용을 작성하세요."
+      },
+    ]).then(answer => {
+      const html = htmlMaker(answer.title, answer.root, answer.p)
+      console.log(`파일명 : ${answer.fileName},
+      내용 : 
+      ${html}`)
+    })
   
 })
 
