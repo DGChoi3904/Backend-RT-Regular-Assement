@@ -41,3 +41,5 @@ function htmlMaker(title,addRoot, p){
   </html>`
   return html;
 }
+
+program.parse();
