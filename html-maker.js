@@ -54,7 +54,7 @@ program.command('html-inquirer')
       },
     ]).then(answer => {
       const html = htmlMaker(answer.title, answer.root, answer.p)
-      console.log(`파일명 : ${answer.fileName},
+      console.log(`파일명 : ${answer.fileName}.html,
       내용 : 
       ${html}`)
     })
