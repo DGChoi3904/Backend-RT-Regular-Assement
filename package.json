@@ -1,0 +1,23 @@
+{
+  "name": "backend-rt-regular-assement",
+  "version": "1.0.0",
+  "description": "**[Subject-5] 백엔드 런타임 정규 평가**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGChoi3904/Backend-RT-Regular-Assement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGChoi3904/Backend-RT-Regular-Assement/issues"
+  },
+  "homepage": "https://github.com/DGChoi3904/Backend-RT-Regular-Assement#readme",
+  "dependencies": {
+    "commander": "^10.0.1",
+    "inquirer": "^9.2.0"
+  }
+}
